@@ -6,5 +6,6 @@
     <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
     <body <?php body_class(); ?>>
-        <header role="navigation" aria-label="Site Header">
+        <header>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
         </header>
