@@ -4,8 +4,9 @@
     **/
     get_header();
 ?>
-<div class="wrapper intro-wrapper">
-    <div id="intro">
+<div class="wrapper" id="intro-wrapper">
+    <div id="intro-anim" class="bodymovin" data-bm-path="<?php echo get_template_directory_uri(); ?>/assets/animations/question_intro.json" data-bm-renderer="svg" data-bm-loop="false">
+        <p class="names">
         <?php 
             $args_names = [
                 'intro_slide' => get_field('intro_slide'),
@@ -14,26 +15,22 @@
             ];
             echo get_component('components/names', $args_names); 
         ?>
-    </div>
-</div>
-
-<div class="wrapper questions-wrapper">
-    <div id="q">
-        <p class="questions">
-            <span class="question part1">50 year old presents on Friday with a high grade symptomatic AV block +/- abnormal echo and referrerd for a pacemaker</span>
         </p>
     </div>
 </div>
 
-<script>
-    let animation = bodymovin.loadAnimation({
-        container: document.getElementById('intro'),
-        path: '<?php echo get_template_directory_uri(); ?>/assets/animations/question_intro.json',
-        renderer: 'svg',
-        loop: false,
-        autoplay: true, 
-        name: "Question Intro Animation"
-    });
-</script>
+<div class="wrapper" id="questions-wrapper">
+    <div id="q-anim" class="bodymovin" data-bm-path="<?php echo get_template_directory_uri(); ?>/assets/animations/question.json" data-bm-renderer="svg" data-bm-loop="false">
+        <div class="questions">
+            <?php 
+                $args_questions = [
+                    'question_slides' => get_field('question_slides'),
+                    'questions' => get_field('questions')
+                ];
+                echo get_component('components/questions', $args_questions);
+            ?>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

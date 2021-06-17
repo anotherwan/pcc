@@ -19,10 +19,6 @@ body {
   height: 100vh;
 }
 
-.questions-wrapper {
-  display: none;
-}
-
 .names {
   position: absolute;
   display: inline-block;
@@ -79,7 +75,7 @@ body {
   max-width: 60%;
 }
 
-.question {
+.question p {
   display: inline-block;
   padding: 10px 0;
   display: none;
@@ -87,7 +83,7 @@ body {
           animation-delay: 2s;
 }
 
-.question:first-child {
+.question:first-child p {
   display: block;
 }
 

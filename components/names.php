@@ -1,8 +1,7 @@
-<p class="names">
 <?php 
-    if (!!$c['intro_slide']) :
-        $introslide = $c['intro_slide'];
-        foreach ($introslide['names'] as $index => $names) :
+if (!!$c['intro_slide']) :
+    $introslide = $c['intro_slide'];
+    foreach ($introslide['names'] as $index => $names) :
 ?>
     <span class="name" id="name-<?php echo $index ?>">
         <?php 
@@ -10,7 +9,6 @@
         ?>
     </span>
 <?php 
-        endforeach; 
-    endif;
+    endforeach; 
+endif;
 ?>
-</p>
