@@ -1,18 +1,106 @@
 .wrapper {
   position: relative;
   z-index: 0;
-}
-
-#animation {
   width: 100vw;
   height: 100vh;
 }
 
-.questions {
+.names {
   position: absolute;
-  text-align: center;
+  display: inline-block;
   z-index: 1;
-  color: blue;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation: intro-move-up 1.5s forwards ease-in 0.8s;
+          animation: intro-move-up 1.5s forwards ease-in 0.8s;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jdXN0b20td29yZHByZXNzLXRoZW1lLWJvaWxlcnBsYXRlLy4vc3JjL3Njc3MvdGVtcGxhdGVzL2hvbWUvX2FuaW1hdGlvbi5zY3NzIiwid2VicGFjazovL2N1c3RvbS13b3JkcHJlc3MtdGhlbWUtYm9pbGVycGxhdGUvLi9zcmMvc2Nzcy90ZW1wbGF0ZS1ob21lLnNjc3MiLCJ3ZWJwYWNrOi8vY3VzdG9tLXdvcmRwcmVzcy10aGVtZS1ib2lsZXJwbGF0ZS8uL3NyYy9zY3NzL3RlbXBsYXRlcy9ob21lL19xdWVzdGlvbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0k7RUFDQTtBQ0NKOztBRENBO0VBQ0k7RUFDQTtBQ0VKOztBQ1JBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7QURXSixDIiwiZmlsZSI6InB1YmxpYy93cC1jb250ZW50L3RoZW1lcy9wY2MvY3NzL3RlbXBsYXRlLWhvbWUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndyYXBwZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB6LWluZGV4OiAwO1xufVxuI2FuaW1hdGlvbiB7XG4gICAgd2lkdGg6IDEwMHZ3O1xuICAgIGhlaWdodDogMTAwdmg7XG59IiwiLndyYXBwZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IDA7XG59XG5cbiNhbmltYXRpb24ge1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG59XG5cbi5xdWVzdGlvbnMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgei1pbmRleDogMTtcbiAgY29sb3I6IGJsdWU7XG59IiwiLnF1ZXN0aW9ucyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB6LWluZGV4OiAxO1xuICAgIGNvbG9yOiBibHVlO1xufSJdLCJzb3VyY2VSb290IjoiIn0=*/
+@-webkit-keyframes intro-move-up {
+  0% {
+    left: 26%;
+    top: 100%;
+  }
+  75% {
+    visibility: visible;
+    opacity: 0.3;
+  }
+  100% {
+    left: 26%;
+    top: 58%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes intro-move-up {
+  0% {
+    left: 26%;
+    top: 100%;
+  }
+  75% {
+    visibility: visible;
+    opacity: 0.3;
+  }
+  100% {
+    left: 26%;
+    top: 58%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.name {
+  display: block;
+  padding: 10px 0;
+}
+
+.questions {
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: moveup 1.6s forwards ease-in;
+          animation: moveup 1.6s forwards ease-in;
+  max-width: 60%;
+}
+
+.question p {
+  display: inline-block;
+  padding: 10px 0;
+  display: none;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.question:first-child p {
+  display: block;
+}
+
+@-webkit-keyframes moveup {
+  0% {
+    left: 26%;
+    top: 100%;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    left: 26%;
+    top: 54%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveup {
+  0% {
+    left: 26%;
+    top: 100%;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    left: 26%;
+    top: 54%;
+    opacity: 1;
+  }
+}
