@@ -1,8 +1,15 @@
-.wrapper {
+.slides {
   position: relative;
   z-index: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.slide {
+  display: none;
+}
+.slide.current {
+  display: block;
 }
 
 .names {
@@ -59,18 +66,12 @@
   -webkit-animation: moveup 1.6s forwards ease-in;
           animation: moveup 1.6s forwards ease-in;
   max-width: 60%;
+  display: flex;
+  flex-flow: column;
 }
 
-.question p {
-  display: inline-block;
-  padding: 10px 0;
-  display: none;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.question:first-child p {
-  display: block;
+.question {
+  min-height: 235px;
 }
 
 @-webkit-keyframes moveup {
@@ -103,4 +104,9 @@
     top: 54%;
     opacity: 1;
   }
+}
+.q-number {
+  padding-top: 20px;
+  text-align: right;
+  font-size: 25px;
 }
