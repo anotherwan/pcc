@@ -6,7 +6,7 @@ if (!!$c['question_slides']) :
 <li class="slide">
     <!-- <div id="q-anim"> -->
     <div id="q-anim" class="bodymovin" data-bm-path="<?php echo get_template_directory_uri(); ?>/assets/animations/question.json" 
-    data-bm-renderer="svg" data-name="qanim" data-bm-loop="false">
+    data-bm-renderer="svg"  data-name="qanim" data-bm-loop="false">
     </div>
         <ul class="questions">
             <li class="question" id="question-<?php echo ($index+1) ?>">
